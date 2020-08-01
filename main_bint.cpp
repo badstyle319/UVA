@@ -105,8 +105,13 @@ public:
 		--(*this);
 		return x;
 	}
+    //greater than
+    bool operator>(const bint& y)
+    {
+        return !((*this) < y || (*this) == y);
+    }
 	//less than
-	bool operator<(const bint& y) const
+	bool operator<(const bint& y)
 	{
 		if(bNeg==y.bNeg)
 		{
